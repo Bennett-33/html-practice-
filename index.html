@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>project_zero</title>
+  <link rel="stylesheet" type="text/css" href="res/global.css">
+  <link rel="icon" href="res/favicon.ico">
+  <style>
+body{background:#000; color:#666; font-family:'montserrat','Arial','Helvetica','Roboto',sans-serif;}
+div.col{position:fixed; top:0; bottom:0; overflow:hidden;}
+div.inner{position:absolute; left:0; right:0; top:0; min-height:100vh; transition: all 1s;}
+
+div.col p{display:block; text-align:center; white-space:nowrap; font-size:2vw; text-transform:uppercase;
+  transition: all 1s;
+}
+div.col p.sel{color:#fff;}
+  </style>
+  <script src="res/jquery.js"></script>
+  <script>
+var h = 0;
+var m = 0;
+$(document).ready(function(){
+  var col = $('.col');
+  var step = 100.0/col.length;
+  col.each(function(i,item){
+    $(item).css({'left' : (i*step)+'%','width':step+'%'});
+  });
+  setInterval(function(){
+    h = $('p').height();
+    m = $(window).height()/2-(h/2);
+    col.each(function(i,item){
+      var container = $(item).find('.inner');
+      var ch  = container.children();
+      var max = ch.length-1;
+      var sel = Math.floor(Math.random() * max) + 1;
+      ch.removeClass('sel');
+      var selp = $(ch[sel-1]);
+      selp.addClass('sel');
+      var num = (-sel*h)+m;
+      console.log(-sel*h);
+      container.css({top:num+'px'})
+    });
+  },6000);
+});
+$(window).resize(function(){
+  h = $('p').height();
+  m = $(window).height()/2-(h/2);
+})
+  </script>
+</head>
+</head>
+<body>
+
+
+
+  <div class="col"><div class="inner">
+    <p>the cheifs</p>
+    <p>the eagles</p>
+    <p>the saints</p>
+    <p>the browns</p>
+    <p>the ravens</p>
+    <p>the packers</p>
+    <p>the giants</p>
+    <p>the raiders</p>
+    <p>the bills</p>
+    <p>the cadinals</p>
+    <p>the vikings</p>
+    <p>the seahawks</p>
+    <p>the bengals</p>
+    <p>the colts</p>
+    <p>the panthers</p>
+    <p>the rams</p>
+    <p>the chargers</p>
+    <p>the titans</p>
+    <p>the jaguars</p>
+    <p>the falcons</p>
+    <p>the texans</p>
+    <p>the dolphins</p>
+    <p>the 49ers</p>
+    <p>the cowboys</p>
+    <p>the team</p>
+    <p>the players</p>
+    <p>the coach</p>
+    <p>the staff</p>
+    <p>the fans</p>
+    <p>the owners</p>
+    <p>the cards</p>
+  </div></div>
+
+  <div class="col"><div class="inner">
+    <p>win</p>
+    <p>loose</p>
+    <p>stole</p>
+    <p>rigged</p>
+    <p>snagged</p>
+    <p>created</p>
+    <p>cheered</p>
+    <p>took</p>
+    <p>snagged</p>
+    <p>siezed</p>
+    <p>gripped</p>
+    <p>took</p>
+    <p>watched</p>
+    <p>played</p>
+    <p>yelled at</p>
+    <p>hurt</p>
+    <p>kicked</p>
+    <p>punted</p>
+    <p>tackeled</p>
+    <p>ran</p>
+    <p>stalled</p>
+    <p>siked out</p>
+    <p>prohibited</p>
+    <p>avoided</p>
+    <p>ruined</p>
+    <p>founded</p>
+    <p>designed</p>
+    <p>sued</p>
+    <p>nailed</p>
+    <p>polished up</p>
+    <p>showed</p>
+
+  </div></div>
+
+  <div class="col"><div class="inner">
+    <p>the superbowl</p>
+    <p>the world cup</p>
+    <p>the olympics</p>
+    <p>the tourney</p>
+    <p>the game</p>
+    <p>the throphy</p>
+    <p>the mvp</p>
+    <p>the performance</p>
+    <p>the football</p>
+    <p>the commericals</p>
+    <p>the stadium</p>
+    <p>the championship</p>
+    <p>the record</p>
+    <p>the teleivsion</p>
+    <p>the goalpost</p>
+    <p>the field goal</p>
+    <p>the field</p>
+    <p>the owner</p>
+    <p>the fans</p>
+    <p>the coaches</p>
+    <p>the sidelines</p>
+    <p>the crowd</p>
+    <p>the timeout</p>
+    <p>the loss</p>
+    <p>the calls</p>
+    <p>the ball</p>
+    <p>the play</p>
+    <p>the lineup</p>
+    <p>the win</p>
+    <p>the foul</p>
+    <p>the halftime show</p>
+  </div></div>
+
+
+</div>
+
+</body>
+</html>
